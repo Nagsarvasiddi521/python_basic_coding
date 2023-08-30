@@ -1,0 +1,109 @@
+									Python Codes
+#problem1: difference blw number divisible and non divisibles 
+
+n= 6
+m = 30
+k =[]
+d =[]
+for i in range(1,m+1):
+    if(i%6==0):
+        k.append(i)
+    else:
+        d.append(i)
+g = sum(k)
+e = sum(d)
+q =e-g
+print(q)
+
+
+
+
+#project2: Anagram 
+
+p = "listen"
+q ="silenk"
+d =[]
+for i in q:
+    if(i in p):
+        d.append("yes")
+    else:
+        d.append("No")        
+if('No' in d):
+    print("No")
+else:
+    print("Yes")
+
+
+
+
+#project3: def Productsmallpair(sum,arr):   
+
+a=list(map(int,input("enter ").split()))
+d = 4
+b =a.sort()
+k =a[0:2]
+p =sum(k)
+if(p<d):
+    print(a[0]*a[1])
+else:
+    print(-1)
+
+
+
+#problem4: Execute a function that accepts the integer array of length ‘size’ and finds out the maximum number that can be formed by permutation. 
+
+a = list(map(int,input("enter the values").split()))
+a.sort(reverse=True)
+k = str(a)
+p=" "
+for i in a:
+    p=p+str(i)
+k = list(p)
+k.sort(reverse=True)
+t =""
+for i in k:
+    t+=i
+print(t)
+
+
+
+#problem5:code for minimum penality
+
+arr =list(map(int,input("enter the").split(",")))
+p =arr.sort()
+def raw(p):
+    d=[]
+    for i in range(0,len(arr)-1):
+        d.append(arr[i]-arr[i+1])
+    
+	k =sum(d)
+
+    return abs(k)
+e =raw(p)
+print(e)
+
+
+
+#problem6: print Square of the numbers
+
+import math
+a=[64,38,16,81,50,100]
+cou =0
+for i in range(0,len(a)):
+    if(math.ceil(math.sqrt(a[i]))==math.floor(math.sqrt(a[i]))):
+        cou+=1
+print(cou)
+
+
+
+#project7: repeated digits 
+
+a ="579"
+b ="394"
+c="955"
+for i in a:
+    if i in b:
+        if i in c:
+            print(i)
+        else:
+            print(-1)
